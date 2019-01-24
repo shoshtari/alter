@@ -1,5 +1,4 @@
 import pygame, math
-" dast garmi bood hich cari nakardam"
 class draw():
     def __init__(self):
         self.xt=400
