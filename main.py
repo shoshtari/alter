@@ -39,10 +39,8 @@ while not done:
         if event.type==pygame.QUIT:
             done=True
     #update
-    pen.toop_mov()
     #draw
     disp.fill((41, 68, 190))
-    pen.toop()
     pen.kadr()
     disp.blit(rtank, (500, 500))
     pygame.time.Clock().tick(30)
