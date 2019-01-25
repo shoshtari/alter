@@ -34,11 +34,12 @@ class tank():
         self.x+=10*sin(radians(self.angle))
 class goloole():
     def __init__(self):
-        self.x=0
-        self.y=0
-        angle=0
-        a=1180
-        b=780
+        self.x=500
+        self.y=500
+        self.angle=0
+        self.a=1180
+        self.b=780
+        self.p=pygame.image.load("goloole.png")
     def fd(self):
         if self.x>=a or self.x <=20:
             self.angle=180-self.angle
@@ -65,7 +66,7 @@ gfd=False
 grt=False
 glt=False
 gbd=False
-
+g1=goloole()
 while not done:
     #event
     for event in pygame.event.get():
@@ -127,6 +128,7 @@ while not done:
     pen.kadr()
     disp.blit(rtank.t, (rtank.x, rtank.y))
     disp.blit(gtank.t, (gtank.x, gtank.y))
+    disp.blit(g1.p, (g1.x, g1.y))
     pygame.time.Clock().tick(15)
     pygame.display.update()
 pygame.quit()
