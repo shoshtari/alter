@@ -1,6 +1,5 @@
 import pygame, math, random
 from math import *
-" dast garmi bood hich cari nakardam"
 class draw():
     def __init__(self):
         self.tool=1200
@@ -33,6 +32,21 @@ class tank():
     def bd(self):
         self.y+=10*cos(radians(self.angle))
         self.x+=10*sin(radians(self.angle))
+class goloole():
+    def __init__(self):
+        self.x=0
+        self.y=0
+        angle=0
+        a=1180
+        b=780
+    def fd(self):
+        if self.x>=a or self.x <=20:
+            self.angle=180-self.angle
+        if self.y>=b or self.y<=20:
+            self.angle=180-self.angle
+        self.x-=21*sin(radians(self.angle))
+        self.y-=21*cos(radians(self.angle))
+        
 pygame.init()
 disp=pygame.display.set_mode((1200, 800))
 done=False
